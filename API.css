@@ -1,0 +1,131 @@
+/* API.css */
+/* Make the entire page a flex container */
+body {
+    margin: 0;
+    height: 100vh;
+    background: #1e1e1e;
+    font-family: 'Roboto Slab', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 26%;
+}
+
+.card {
+    background: #2c2c2c;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    box-shadow: 10px 4px 10px #3d3d3d,-10px -4px -10ox #aaa;
+}
+
+h2,
+h6 {
+    margin: 10px 0;
+}
+
+#temp {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#icon {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    width: 20%;
+    margin-left: 100px;
+    
+}
+
+.refresh {
+    background: #2c2c2c;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 100px;
+}
+
+.refresh i {
+    color: white;
+    font-size: 20px;
+}
+
+.refresh:hover {
+    background: #3d3d3d;
+}
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#temp {
+    font-size: 60px;
+    font-weight: bold;
+    animation: bounceIn 0.8s ease;
+}
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#icon {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    /* Initial state */
+    animation: fadeSlide 1s ease forwards;
+    animation-delay: 0.5s;
+}
+.search-bar input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.search-bar button {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
