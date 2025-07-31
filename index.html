@@ -26,6 +26,12 @@
             <h2><i class="fa fa-map-marker "></i><span id="location"></span></h2>
             <h6 id="Weather"></h6>
             <h4><span id="temp"></span><sup>o</sup>C</h4>
+            <div id="details" class="mt-3">
+  <p><i class="fa fa-tint"></i> Humidity: <span id="humidity">--</span>%</p>
+  <p><i class="fa fa-wind"></i> Wind Speed: <span id="wind">--</span> m/s</p>
+  <p><i class="fa fa-gauge-high"></i> Pressure: <span id="pressure">--</span> hPa</p>
+</div>
+
             <img src="" id="icon">
             <button onclick="window.location.reload()" class="refresh"><i class="fa fa-refresh"></i></button>
         </div>
@@ -50,6 +56,10 @@
       document.getElementById('location').innerHTML = obj.name;
       document.getElementById('temp').innerHTML = Math.round(obj.main.temp - 273.15);
       document.getElementById('icon').src = "https://openweathermap.org/img/w/" + obj.weather[0].icon + ".png";
+      document.getElementById('humidity').innerText = obj.main.humidity;
+document.getElementById('wind').innerText = obj.wind.speed;
+document.getElementById('pressure').innerText = obj.main.pressure;
+
 
       // Restart animations
       resetAnimation('icon', 'fadeSlide 1s ease forwards');
